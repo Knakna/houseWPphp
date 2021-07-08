@@ -5,23 +5,16 @@
         <div class="container">
             <div class="footer__wrap">
 
-                <ul class="footer__list">
-                    <li class="footer__item">
-                        <a class="footer__link" href="#">About Us</a>
-                    </li>
-                    <li class="footer__item">
-                        <a class="footer__link" href="#">How it Works</a>
-                    </li>
-                    <li class="footer__item">
-                        <a class="footer__link" href="#">FAQ</a>
-                    </li>
-                    <li class="footer__item">
-                        <a class="footer__link" href="#">Contact Us</a>
-                    </li>
-                    <li class="footer__item">
-                        <a class="footer__link" href="#">Privacy Policy</a>
-                    </li>
-                </ul>
+
+            <?php wp_nav_menu( [
+                        'theme_location'  => 'footer_menu',
+                        'container'       => null,
+                        'menu_class'      => 'footer__list',
+                        'menu_id'         => 'footer__nav',
+                    ] ); ?>
+
+
+               
 
                 <a class="footer__logo logo" href="#header">
                     <svg class="logo__img">

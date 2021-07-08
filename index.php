@@ -38,7 +38,7 @@
                 Build professional valuable room for you
             </h2>
 
-            <div class="room__gallery">
+            <div class="room__gallery" id="gallery">
                 <a class="room__img" href="<?php echo IMG_DIR; ?>/room/img1.jpg">
                     <img src="<?php echo IMG_DIR; ?>/room/img1.jpg" alt="image">
                 </a>
@@ -70,7 +70,7 @@
 
 
     <!------------ archmove  ------------>
-    <section class="archmove">
+    <section class="archmove" id="archmove">
         <div class="container">
             <h2 class="archmove__title title">Build your needs with Archmove
             </h2>
@@ -138,7 +138,7 @@
 
     <!------------ reviews ------------>
 
-    <section class="reviews">
+    <section class="reviews" id="reviews">
         <div class="container">
             <h2 class="reviews__title title">Sound Too Good To Be True?</h2>
 
@@ -216,7 +216,7 @@
 
     <!------------ realize ------------>
 
-    <section class="realize">
+    <section class="realize" id="realize">
         <div class="container ">
             <div class="realize__wrap">
                 <h2 class="realize__title title">Realize your dream project with <span

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <title>Dream house</title>
+    <title><?php bloginfo('description'); ?> </title>
 
 
     <?php wp_head(); ?>
@@ -36,20 +36,15 @@
                         </svg>
                     </a>
                     <nav class="header__nav">
-                        <ul class="header__list">
-                            <li class="header__item">
-                                <a class="header__link" href="#">Design Gallery</a>
-                            </li>
-                            <li class="header__item">
-                                <a class="header__link" href="#">List of Architect</a>
-                            </li>
-                            <li class="header__item">
-                                <a class="header__link" href="#">Articles</a>
-                            </li>
-                            <li class="header__item">
-                                <a class="header__link" href="#">How it Works</a>
-                            </li>
-                        </ul>
+
+                    <?php wp_nav_menu( [
+                        'theme_location'  => 'top_menu',
+                        'container'       => null,
+                        'menu_class'      => 'header__list',
+                        'menu_id'         => 'nav',
+                    ] ); ?>
+
+                        
                     </nav>
                 </div>
 

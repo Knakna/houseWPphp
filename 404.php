@@ -2,7 +2,7 @@
 .errow {
     text-align: center;
     padding: 5rem;
-    margin-top: 15rem;
+    margin-top: 5vh;
 
 }
 
