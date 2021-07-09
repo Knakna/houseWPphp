@@ -6,24 +6,22 @@
     <main class="main">
         <div class="container">
             <h1 class="main__title">
-                Build Your
-                Dream <span class="main__accent">House</span>
+            <?php the_field('main__title'); ?>
             </h1>
+
+            <!-- <span class="main__accent">House</span> -->
 
             <div class="main__wrap">
 
                 <div class="main__desc">
                     <p class="main__text text">
-                        The first and most trusted marketplace of design & build house in The World. 100% guaranteed
-                        Build
-                        safe, comfortable and transparent with a project management for the best result
+                    <?php the_field('main__text'); ?>
                     </p>
                     <button class="main__btn btn">Free Consultation</button>
                 </div>
 
                 <picture class="main__wrap-img">
-                    <source srcset="<?php echo IMG_DIR; ?>/main/mainImg.webp" type="image/webp">
-                    <img class="main__img" src="<?php echo IMG_DIR; ?>/main/mainImg.jpg" alt="house">
+                    <img class="main__img" src= <?php the_field('main__img'); ?> alt="house">
                 </picture>
 
             </div> <!-- /.main__wrap -->
