@@ -1023,7 +1023,7 @@ body {
     }
 }
 
-.main__accent {
+.main__title span {
     color: #FD665E;
     letter-spacing: 1rem;
 }
@@ -1346,7 +1346,7 @@ body {
     letter-spacing: 0.01em;
 }
 
-.reviews__name {
+.reviews__author span {
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.6;
@@ -1367,7 +1367,7 @@ body {
     }
 }
 
-.realize__wrapp {
+.realize__wrap {
     margin-left: auto;
     padding-top: 18rem;
     max-width: 53.5rem;
@@ -1385,7 +1385,7 @@ body {
     margin-bottom: 5.5rem;
 }
 
-.realize__color {
+.realize__title span {
     color: #FD665E;
 }
 

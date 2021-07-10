@@ -9,7 +9,9 @@
             <?php the_field('main__title'); ?>
             </h1>
 
-            <!-- <span class="main__accent">House</span> -->
+            <span class="main__accent">
+            <?php the_field('main__accent'); ?>
+            </span>
 
             <div class="main__wrap">
 
@@ -21,7 +23,7 @@
                 </div>
 
                 <picture class="main__wrap-img">
-                    <img class="main__img" src= <?php the_field('main__img'); ?> alt="house">
+                    <img class="main__img" src=" <?php the_field('main__img'); ?> " alt="house">
                 </picture>
 
             </div> <!-- /.main__wrap -->
@@ -33,33 +35,33 @@
     <section class="room">
         <div class="container">
             <h2 class="room__title title">
-                Build professional valuable room for you
+            <?php the_field('room__title'); ?>
             </h2>
 
             <div class="room__gallery" id="gallery">
-                <a class="room__img" href="<?php echo IMG_DIR; ?>/room/img1.jpg">
-                    <img src="<?php echo IMG_DIR; ?>/room/img1.jpg" alt="image">
+                <a class="room__img" href="<?php the_field('room__img'); ?>">
+                    <img src= <?php the_field('room__img'); ?> alt="image">
                 </a>
 
-                <a class="room__img" href="<?php echo IMG_DIR; ?>/room/img2.jpg">
-                    <img src="<?php echo IMG_DIR; ?>/room/img2.jpg" alt="image">
+                <!-- <a class="room__img" href="<?php the_field('room__img'); ?>">
+                    <img src= <?php the_field('room__img'); ?> alt="image">
                 </a>
 
-                <a class="room__img" href="<?php echo IMG_DIR; ?>/room/img3.jpg">
-                    <img src="<?php echo IMG_DIR; ?>/room/img3.jpg" alt="image">
+                <a class="room__img" href="<?php the_field('room__img'); ?>">
+                    <img src="<?php the_field('room__img'); ?>" alt="image">
                 </a>
 
-                <a class="room__img" href="<?php echo IMG_DIR; ?>/room/img4.jpg">
-                    <img src="<?php echo IMG_DIR; ?>/room/img4.jpg" alt="image">
+                <a class="room__img" href="<?php the_field('room__img'); ?>">
+                    <img src= <?php the_field('room__img'); ?> alt="image">
                 </a>
 
-                <a class="room__img" href="<?php echo IMG_DIR; ?>/room/img5.jpg">
-                    <img src="<?php echo IMG_DIR; ?>/room/img5.jpg" alt="image">
+                <a class="room__img" href="<?php the_field('room__img'); ?>">
+                    <img src="<?php the_field('room__img'); ?>" alt="image">
                 </a>
 
-                <a class="room__img" href="<?php echo IMG_DIR; ?>/room/img6.jpg">
-                    <img src="<?php echo IMG_DIR; ?>/room/img6.jpg" alt="image">
-                </a>
+                <a class="room__img" href="<?php the_field('room__img'); ?>">
+                    <img src= <?php the_field('room__img'); ?> alt="image">
+                </a> -->
 
             </div> <!-- /.room__gallery -->
 
@@ -70,14 +72,14 @@
     <!------------ archmove  ------------>
     <section class="archmove" id="archmove">
         <div class="container">
-            <h2 class="archmove__title title">Build your needs with Archmove
+            <h2 class="archmove__title title">
+            <?php the_field('archmove__title'); ?>
             </h2>
 
             <div class="archmove__wrap">
 
                 <picture class="archmove__wrap-img">
-                    <source srcset="<?php echo IMG_DIR; ?>/archmove/archImg.webp" type="image/webp">
-                    <img class="archmove__img" src="<?php echo IMG_DIR; ?>/archmove/archImg.jpg" alt="image">
+                    <img class="archmove__img" src= <?php the_field('archmove__img'); ?> alt="image">
                 </picture>
 
                 <div class="archmove__boxes">
@@ -138,7 +140,9 @@
 
     <section class="reviews" id="reviews">
         <div class="container">
-            <h2 class="reviews__title title">Sound Too Good To Be True?</h2>
+            <h2 class="reviews__title title">
+            <?php the_field('reviews__title'); ?>
+            </h2>
 
             <div class="reviews__wrap">
 
@@ -149,15 +153,11 @@
                             <article class="reviews__article">
 
                                 <blockquote class="reviews__blockquote">
-                                    We just wanted to thank you for this fantastic website! We are so grateful for being
-                                    able to
-                                    advertise our Petite cabin and receive feedback from people from all over the U.S.
-                                    and
-                                    even
-                                    further.
+                                <?php the_field('reviews__blockquote'); ?>
                                 </blockquote>
-                                <cite class="reviews__author"><span class="reviews__name"> Adam Morph </span>— CEO A
-                                    lfatech</cite>
+                                <cite class="reviews__author"><span class="reviews__name">  <?php the_field('reviews__name'); ?> </span>
+                                <?php the_field('reviews__author'); ?>
+                            </cite>
                             </article>
 
                         </div> <!-- /.swiper-slide -->
@@ -217,8 +217,12 @@
     <section class="realize" id="realize">
         <div class="container ">
             <div class="realize__wrap">
-                <h2 class="realize__title title">Realize your dream project with <span
-                        class="realize__color">Archmove</span></h2>
+                <h2 class="realize__title title">
+                <?php the_field('realize__title'); ?>
+
+                <span class="realize__color">
+                <?php the_field('realize__color'); ?>
+                </span></h2>
                 <button class="realize__btn btn">FREE CONSULTATION</button>
             </div>
         </div> <!-- /.container -->
