@@ -7,11 +7,13 @@
         <div class="container">
             <h1 class="main__title">
             <?php the_field('main__title'); ?>
-            </h1>
-
             <span class="main__accent">
             <?php the_field('main__accent'); ?>
             </span>
+
+            </h1>
+
+
 
             <div class="main__wrap">
 
@@ -43,14 +45,6 @@
                     <img src= <?php the_field('room__img'); ?> alt="image">
                 </a>
 
-                <!-- <a class="room__img" href="<?php the_field('room__img'); ?>">
-                    <img src= <?php the_field('room__img'); ?> alt="image">
-                </a>
-
-                <a class="room__img" href="<?php the_field('room__img'); ?>">
-                    <img src="<?php the_field('room__img'); ?>" alt="image">
-                </a>
-
                 <a class="room__img" href="<?php the_field('room__img'); ?>">
                     <img src= <?php the_field('room__img'); ?> alt="image">
                 </a>
@@ -61,7 +55,15 @@
 
                 <a class="room__img" href="<?php the_field('room__img'); ?>">
                     <img src= <?php the_field('room__img'); ?> alt="image">
-                </a> -->
+                </a>
+
+                <a class="room__img" href="<?php the_field('room__img'); ?>">
+                    <img src="<?php the_field('room__img'); ?>" alt="image">
+                </a>
+
+                <a class="room__img" href="<?php the_field('room__img'); ?>">
+                    <img src= <?php the_field('room__img'); ?> alt="image">
+                </a>
 
             </div> <!-- /.room__gallery -->
 
@@ -84,52 +86,35 @@
 
                 <div class="archmove__boxes">
 
-                    <div class="archmove__box">
-                        <div class="archmove__wrap-icon">
-                            <img class="archmove__icon" src="<?php echo IMG_DIR; ?>/archmove/icon1.svg" alt="icon">
-                        </div>
-                        <div class="archmove__desc">
-                            <h4 class="archmove__caption">100% guaranteed project completion
-                            </h4>
-                            <p class="archmove__text text">Build safe, comfortable and transparent with a project
-                                management
-                                application with a joint account.</p>
-                        </div>
-                    </div>
-                    <!-- /.archmove__box -->
+                     <?php foreach(getFeatures() as $feature): ?>
 
                     <div class="archmove__box">
                         <div class="archmove__wrap-icon">
-                        <img class="archmove__icon" src="<?php echo IMG_DIR; ?>/archmove/icon2.svg" alt="icon">
+                            <img class="archmove__icon" src="<?php echo $feature['img'] ?>" alt="icon">
                         </div>
                         <div class="archmove__desc">
-                            <h4 class="archmove__caption">No additional fees
+                            <h4 class="archmove__caption">
+                            <?php echo $feature['title'] ?>
                             </h4>
-                            <p class="archmove__text text">There are no hidden costs. The value of the offer you get is
-                                the
-                                value you
-                                paid.</p>
-                        </div>
-                    </div>
-                    <!-- /.archmove__box -->
+                            <p class="archmove__text text">
+                            <?php echo $feature['text'] ?>
+                            </p>
 
-                    <div class="archmove__box">
-                        <div class="archmove__wrap-icon">
-                        <img class="archmove__icon" src="<?php echo IMG_DIR; ?>/archmove/icon3.svg" alt="icon">
+                            <i> <?php echo $feature["add__desc"] ?> </i>
                         </div>
-                        <div class="archmove__desc">
-                            <h4 class="archmove__caption">Get escort from the Team
-                            </h4>
-                            <p class="archmove__text text">Monitor reports from the Arsitag team who check directly in
-                                the
-                                field.</p>
-                        </div>
-                    </div>
-                    <!-- /.archmove__box -->
+                    </div>   <!-- /.archmove__box -->
 
-                    <button class="archmove__btn btn">CONSULTATION</button>
+                    <?php endforeach; ?>
 
-                </div> <!-- /.archmove__desc -->
+
+
+                <button class="archmove__btn btn">CONSULTATION</button>
+
+                </div>
+
+
+
+
 
             </div> <!-- /.archmove__wrap -->
         </div><!-- /.container -->
@@ -163,33 +148,27 @@
                         </div> <!-- /.swiper-slide -->
 
                         <div class="swiper-slide">
-                            <article class="reviews__article">
-                                <blockquote class="reviews__blockquote">
-                                    We just wanted to thank you for this fantastic website! We are so grateful for being
-                                    able to
-                                    advertise our Petite cabin and receive feedback from people from all over the U.S.
-                                    and
-                                    even
-                                    further.
-                                </blockquote>
-                                <cite class="reviews__author"><span class="reviews__name"> Adam Morph </span>— CEO A
-                                    lfatech</cite>
+                        <article class="reviews__article">
+
+                            <blockquote class="reviews__blockquote">
+                            <?php the_field('reviews__blockquote'); ?>
+                            </blockquote>
+                            <cite class="reviews__author"><span class="reviews__name">  <?php the_field('reviews__name'); ?> </span>
+                            <?php the_field('reviews__author'); ?>
+                            </cite>
                             </article>
                         </div> <!-- /.swiper-slide -->
 
 
                         <div class="swiper-slide">
-                            <article class="reviews__article">
-                                <blockquote class="reviews__blockquote">
-                                    We just wanted to thank you for this fantastic website! We are so grateful for being
-                                    able to
-                                    advertise our Petite cabin and receive feedback from people from all over the U.S.
-                                    and
-                                    even
-                                    further.
-                                </blockquote>
-                                <cite class="reviews__author"><span class="reviews__name"> Adam Morph </span>— CEO A
-                                    lfatech</cite>
+                        <article class="reviews__article">
+
+                            <blockquote class="reviews__blockquote">
+                            <?php the_field('reviews__blockquote'); ?>
+                            </blockquote>
+                            <cite class="reviews__author"><span class="reviews__name">  <?php the_field('reviews__name'); ?> </span>
+                            <?php the_field('reviews__author'); ?>
+                            </cite>
                             </article>
                         </div> <!-- /.swiper-slide -->
 
