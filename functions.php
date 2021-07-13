@@ -59,42 +59,58 @@ function register_post_types(){
 		],
 		'public'              => false,
 		'show_ui'             => true, // зависит от public
-		'menu_icon'           => 'dashicons-admin-tools',
+		'menu_icon'           => 'dashicons-star-filled',
 		'supports'            => [ 'title', 'editor', 'thumbnail' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
 	] );
 }
 
 
 function getFeatures(){
-
 $args = array(
 	'orderby'     => 'date',
 	'order'       => 'DESC',
 	'post_type'   => 'features'
 ) ;
 
-
 $features= [];
 
-foreach(get_posts($args) as $post ){
 
-	$feature = get_fields($post->ID);
+
+foreach(get_posts($args) as $post ) {
+
+// 	// $feature = get_fields($post->ID);
+	// echo $post->ID;
+	$feature = (get_fields($post->ID));
 
 	$feature['img'] = get_the_post_thumbnail_url( $post->ID, 'thumbnail' );
 
 	$feature['title'] = $post->post_title;
 	$feature['text'] = $post->post_content;
-
+	// $feature['add__desc'] = $post->post_add__desc;
 	$features[] = $feature;
-}
 
+}
 
 return $features;
-
+// return get_posts($args);
 
 }
 
-var_dump(getFeatures());
+
+print_r(getFeatures());
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -105,13 +121,12 @@ var_dump(getFeatures());
 // }
 
 
-
-
-
 // foreach( $posts as $post ){
 // 	setup_postdata($post);
 //     // формат вывода the_title() ...
 // }
 
 // wp_reset_postdata(); // сброс
+
+
 

@@ -45,24 +45,24 @@
                     <img src= <?php the_field('room__img'); ?> alt="image">
                 </a>
 
-                <a class="room__img" href="<?php the_field('room__img'); ?>">
-                    <img src= <?php the_field('room__img'); ?> alt="image">
+                <a class="room__img" href="<?php the_field('room__img2'); ?>">
+                    <img src= <?php the_field('room__img2'); ?> alt="image">
                 </a>
 
-                <a class="room__img" href="<?php the_field('room__img'); ?>">
-                    <img src="<?php the_field('room__img'); ?>" alt="image">
+                <a class="room__img" href="<?php the_field('room__img3'); ?>">
+                    <img src="<?php the_field('room__img3'); ?>" alt="image">
                 </a>
 
-                <a class="room__img" href="<?php the_field('room__img'); ?>">
-                    <img src= <?php the_field('room__img'); ?> alt="image">
+                <a class="room__img" href="<?php the_field('room__img4'); ?>">
+                    <img src= <?php the_field('room__img4'); ?> alt="image">
                 </a>
 
-                <a class="room__img" href="<?php the_field('room__img'); ?>">
-                    <img src="<?php the_field('room__img'); ?>" alt="image">
+                <a class="room__img" href="<?php the_field('room__img5'); ?>">
+                    <img src="<?php the_field('room__img5'); ?>" alt="image">
                 </a>
 
-                <a class="room__img" href="<?php the_field('room__img'); ?>">
-                    <img src= <?php the_field('room__img'); ?> alt="image">
+                <a class="room__img" href="<?php the_field('room__img6'); ?>">
+                    <img src= <?php the_field('room__img6'); ?> alt="image">
                 </a>
 
             </div> <!-- /.room__gallery -->
@@ -86,23 +86,23 @@
 
                 <div class="archmove__boxes">
 
-                     <?php foreach(getFeatures() as $feature): ?>
+                    <?php foreach(getFeatures() as $feature): ?>
 
-                    <div class="archmove__box">
-                        <div class="archmove__wrap-icon">
-                            <img class="archmove__icon" src="<?php echo $feature['img'] ?>" alt="icon">
-                        </div>
-                        <div class="archmove__desc">
-                            <h4 class="archmove__caption">
-                            <?php echo $feature['title'] ?>
-                            </h4>
-                            <p class="archmove__text text">
-                            <?php echo $feature['text'] ?>
-                            </p>
+                        <div class="archmove__box">
+                            <div class="archmove__wrap-icon">
+                                <img class="archmove__icon" src="<?php echo $feature['img'] ?>" alt="icon">
+                            </div>
+                            <div class="archmove__desc">
+                                <h4 class="archmove__caption">
+                                <?php echo $feature['title'] ?>
+                                </h4>
+                                <p class="archmove__text text">
+                                <?php echo $feature['text'] ?>
+                                </p>
 
-                            <i> <?php echo $feature["add__desc"] ?> </i>
-                        </div>
-                    </div>   <!-- /.archmove__box -->
+                                <i> <?php echo $feature["add__desc"]?> </i>
+                            </div>
+                        </div>   <!-- /.archmove__box -->
 
                     <?php endforeach; ?>
 
@@ -111,8 +111,6 @@
                 <button class="archmove__btn btn">CONSULTATION</button>
 
                 </div>
-
-
 
 
 
@@ -142,7 +140,7 @@
                                 </blockquote>
                                 <cite class="reviews__author"><span class="reviews__name">  <?php the_field('reviews__name'); ?> </span>
                                 <?php the_field('reviews__author'); ?>
-                            </cite>
+                                 </cite>
                             </article>
 
                         </div> <!-- /.swiper-slide -->
@@ -151,10 +149,10 @@
                         <article class="reviews__article">
 
                             <blockquote class="reviews__blockquote">
-                            <?php the_field('reviews__blockquote'); ?>
+                            <?php the_field('reviews__blockquote2'); ?>
                             </blockquote>
-                            <cite class="reviews__author"><span class="reviews__name">  <?php the_field('reviews__name'); ?> </span>
-                            <?php the_field('reviews__author'); ?>
+                            <cite class="reviews__author"><span class="reviews__name">  <?php the_field('reviews__name2'); ?> </span>
+                            <?php the_field('reviews__author2'); ?>
                             </cite>
                             </article>
                         </div> <!-- /.swiper-slide -->
@@ -164,12 +162,12 @@
                         <article class="reviews__article">
 
                             <blockquote class="reviews__blockquote">
-                            <?php the_field('reviews__blockquote'); ?>
+                            <?php the_field('reviews__blockquote3'); ?>
                             </blockquote>
-                            <cite class="reviews__author"><span class="reviews__name">  <?php the_field('reviews__name'); ?> </span>
-                            <?php the_field('reviews__author'); ?>
+                            <cite class="reviews__author"><span class="reviews__name">  <?php the_field('reviews__name3'); ?> </span>
+                            <?php the_field('reviews__author3'); ?>
                             </cite>
-                            </article>
+                        </article>
                         </div> <!-- /.swiper-slide -->
 
                     </div> <!-- /.swiper-wrapper -->
