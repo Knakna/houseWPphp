@@ -29,12 +29,12 @@ function archmove_style() {
 function archmove_scripts() {
 
     wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' );
+    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
 	wp_enqueue_script( 'jquery' );
 
 	wp_enqueue_script( 'swiper-script',  'https://unpkg.com/swiper/swiper-bundle.min.js');
 
-	wp_enqueue_script( 'main-script', JS_DIR . '/script.js', array(jquery), 'null', true );
+	wp_enqueue_script( 'main-script', JS_DIR . '/script.js', array('jquery'), 'null', true );
 }
 
 
@@ -78,8 +78,7 @@ $features= [];
 
 foreach(get_posts($args) as $post ) {
 
-// 	// $feature = get_fields($post->ID);
-	// echo $post->ID;
+
 	$feature = (get_fields($post->ID));
 
 	$feature['img'] = get_the_post_thumbnail_url( $post->ID, 'thumbnail' );
@@ -88,16 +87,17 @@ foreach(get_posts($args) as $post ) {
 	$feature['text'] = $post->post_content;
 	// $feature['add__desc'] = $post->post_add__desc;
 	$features[] = $feature;
-
 }
 
 return $features;
-// return get_posts($args);
 
 }
 
 
-print_r(getFeatures());
+// print_r(getFeatures());
+
+
+remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
 
 
 
@@ -127,6 +127,9 @@ print_r(getFeatures());
 // }
 
 // wp_reset_postdata(); // сброс
+
+// 	// $feature = get_fields($post->ID);
+	// echo $post->ID;
 
 
 
