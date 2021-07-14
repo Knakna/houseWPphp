@@ -1115,6 +1115,12 @@ body {
     overflow: hidden;
 }
 
+.room__wrap {
+    display: inline-block;
+    
+    overflow: hidden;
+}
+
 .room__img {
     display: block;
     width: 34rem;

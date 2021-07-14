@@ -25,7 +25,7 @@
                 </div>
 
                 <picture class="main__wrap-img">
-                    <img class="main__img" src=" <?php the_field('main__img'); ?> " alt="house">
+                    <img class="main__img" src="<?php the_field('main__img'); ?> " alt="house">
                 </picture>
 
             </div> <!-- /.main__wrap -->
@@ -41,29 +41,41 @@
             </h2>
 
             <div class="room__gallery" id="gallery">
-                <a class="room__img" href="<?php the_field('room__img'); ?>">
-                    <img src= <?php the_field('room__img'); ?> alt="image">
-                </a>
+                <div class="room__wrap">
+                    <a class="room__img" href="<?php the_field('room__img'); ?>">
+                        <img src= <?php the_field('room__img'); ?> alt="image">
+                     </a>
+                </div>
 
-                <a class="room__img" href="<?php the_field('room__img2'); ?>">
-                    <img src= <?php the_field('room__img2'); ?> alt="image">
-                </a>
+                <div class="room__wrap">
+                    <a class="room__img" href="<?php the_field('room__img2'); ?>">
+                        <img src= <?php the_field('room__img2'); ?> alt="image">
+                    </a>
+                </div>
 
-                <a class="room__img" href="<?php the_field('room__img3'); ?>">
-                    <img src="<?php the_field('room__img3'); ?>" alt="image">
-                </a>
+                <div class="room__wrap">
+                    <a class="room__img" href="<?php the_field('room__img3'); ?>">
+                      <img src="<?php the_field('room__img3'); ?>" alt="image">
+                    </a>
+                </div>
 
-                <a class="room__img" href="<?php the_field('room__img4'); ?>">
-                    <img src= <?php the_field('room__img4'); ?> alt="image">
-                </a>
+                <div class="room__wrap">
+                    <a class="room__img" href="<?php the_field('room__img4'); ?>">
+                        <img src= <?php the_field('room__img4'); ?> alt="image">
+                    </a>
+                </div>
 
-                <a class="room__img" href="<?php the_field('room__img5'); ?>">
-                    <img src="<?php the_field('room__img5'); ?>" alt="image">
-                </a>
+                <div class="room__wrap">
+                    <a class="room__img" href="<?php the_field('room__img5'); ?>">
+                         <img src="<?php the_field('room__img5'); ?>" alt="image">
+                    </a>
+                </div>
 
-                <a class="room__img" href="<?php the_field('room__img6'); ?>">
-                    <img src= <?php the_field('room__img6'); ?> alt="image">
-                </a>
+                <div class="room__wrap">
+                    <a class="room__img" href="<?php the_field('room__img6'); ?>">
+                        <img src= <?php the_field('room__img6'); ?> alt="image">
+                     </a>
+                </div>
 
             </div> <!-- /.room__gallery -->
 
